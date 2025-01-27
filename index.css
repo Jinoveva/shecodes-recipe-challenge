@@ -111,6 +111,47 @@ li {
     margin-bottom: 20px;
 }
 
+
+.rating-container{
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 400px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rating-container h3{
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.stars{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.star{
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3 ease, transform 0.2 ease;
+}
+
+.star:hover{
+    color: #ffcc00;
+    transform: scale(1.2);
+}
+
+.feedback{
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #666
+}
+
 @keyframes slideIn {
     0% {
         opacity: 0;
