@@ -60,26 +60,34 @@ img {
     margin-bottom: 20px;
 }
 
-ul {
+.ingredients-list {
     padding-left: 50px;
-    margin-left: 50px;
-    list-style-position: inside;
+    margin-left: 50px;;
+    list-style: none;
     text-align: left;
 }
 
-li {
-    font-family: "Montserrat", serif;
-    font-weight: 300;
-    font-style: normal;
+.ingredients-list li {
+    font-family: "Monteserrat", serif;
+    font-size: 25px;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.left-half {
-    width: 50%;
-    margin: 20px auto;
-    padding: 20px;
-    text-align: left;
+.ingredients-list input[type="checkbox"] {
+    width: 1.5rem;
+    height: 1.5rem;
+    accent-color: #ffcc00;
+    cursor: pointer;
 }
+
+.ingredients-list input[type="checkbox"]:checked+label {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
 
 .row {
     display: flex;
