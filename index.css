@@ -154,6 +154,11 @@ li {
     color: #666
 }
 
+footer {
+    font-family: "Montserrat", serif;
+    border: 2px solid black;
+}
+
 @keyframes slideIn {
     0% {
         opacity: 0;
