@@ -119,6 +119,39 @@ img {
     margin-bottom: 20px;
 }
 
+/*
+.collapsible {
+    cursor: pointer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.collapsible:after {
+    content: ' ▼';
+}
+
+...for the content that is initially hidden
+.content { 
+    font-family: "Monteserrat", serif;
+    display: none;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+...come back to make it interactive with JS*/
+
+.collapsible.active:after {
+    content: ' ▲';
+} 
 
 .rating-container{
     text-align: center;
