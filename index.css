@@ -32,6 +32,17 @@ img {
     margin-bottom: 20px;
 }
 
+img:hover {
+    border: 3px solid black;
+    transition: border 0.3s ease; 
+    /* adds a border when hovering over the img */
+    transform: rotate(5deg);
+    transition: transform 0.3s ease;
+    /* Rotates img when hovering over it*/
+        }
+    
+}
+
 .details,
 .icons,
 .labels {
