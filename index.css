@@ -30,18 +30,10 @@ img {
     height: auto;
     max-height: 550px;
     margin-bottom: 20px;
+    position: relative;
+    animation: slideRotate 2s ease-out forwards; /* slides image for 2s then return back to starting position*/
 }
 
-img:hover {
-    border: 3px solid black;
-    transition: border 0.3s ease; 
-    /* adds a border when hovering over the img */
-    transform: rotate(5deg);
-    transition: transform 0.3s ease;
-    /* Rotates img when hovering over it*/
-        }
-    
-}
 
 .details,
 .icons,
@@ -129,4 +121,18 @@ li {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@keyframes slideRotate{
+       0% {
+        transform: translateX(-100px) rotate(0deg); /* no rotation at start of screen*/
+       }
+
+       50% {
+        transform: translateX(0) rotate(180deg); /*half way slide in, halway rotation*/
+       }
+
+       100% {
+        transform: translateX(0) rotate(360deg); /*full slide in, full rotation*/
+       }
 }
