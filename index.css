@@ -128,22 +128,24 @@ li {
     color: #333;
 }
 
-.stars{
+.stars {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.star{
+.star {
     font-size: 2rem;
     color: #ccc;
     cursor: pointer;
-    transition: color 0.3 ease, transform 0.2 ease;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
+/* Come back to fix the hovering of stars: Hover effect for the current star and previous ones */
 
-.star:hover{
+.star:hover {
     color: #ffcc00;
     transform: scale(1.2);
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .feedback{
