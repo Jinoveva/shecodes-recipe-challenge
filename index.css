@@ -31,7 +31,8 @@ img {
     max-height: 550px;
     margin-bottom: 20px;
     position: relative;
-    animation: slideRotate 2s ease-out forwards; /* slides image for 2s then return back to starting position*/
+    animation: slideRotate 2s ease-out forwards;
+    /* slides image for 2s then return back to starting position*/
 }
 
 
@@ -62,7 +63,8 @@ img {
 
 .ingredients-list {
     padding-left: 50px;
-    margin-left: 50px;;
+    margin-left: 50px;
+    ;
     list-style: none;
     text-align: left;
 }
@@ -119,6 +121,7 @@ img {
     margin-bottom: 20px;
 }
 
+/*
 .collapsible {
     cursor: pointer;
     background-color: #f1f1f1;
@@ -132,12 +135,10 @@ img {
     border-radius: 5px;
     margin: 10px 0;
 }
-
 .collapsible:after {
     content: ' ▼';
 }
-
-/*for the content that is initially hidden*/
+...for the content that is initially hidden
 .content { 
     font-family: "Monteserrat", serif;
     display: none;
@@ -146,13 +147,12 @@ img {
     background-color: #f9f9f9;
     border-radius: 5px;
 }
-/*come back to make it interactive with JS*/
-
+...come back to make it interactive with JS*/
 .collapsible.active:after {
     content: ' ▲';
-} 
+}
 
-.rating-container{
+.rating-container {
     text-align: center;
     margin: 20px auto;
     padding: 20px;
@@ -162,7 +162,7 @@ img {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.rating-container h3{
+.rating-container h3 {
     font-size: 1.7rem;
     margin-bottom: 15px;
     color: #333;
@@ -180,6 +180,7 @@ img {
     cursor: pointer;
     transition: color 0.3s ease, transform 0.2s ease;
 }
+
 /* Come back to fix the hovering of stars: Hover effect for the current star and previous ones */
 
 .star:hover {
@@ -188,7 +189,7 @@ img {
     transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.feedback{
+.feedback {
     margin-top: 15px;
     font-size: 1.2rem;
     color: #666
@@ -211,16 +212,19 @@ footer {
     }
 }
 
-@keyframes slideRotate{
-       0% {
-        transform: translateX(-100px) rotate(0deg); /* no rotation at start of screen*/
-       }
+@keyframes slideRotate {
+    0% {
+        transform: translateX(-100px) rotate(0deg);
+        /* no rotation at start of screen*/
+    }
 
-       50% {
-        transform: translateX(0) rotate(180deg); /*half way slide in, halway rotation*/
-       }
+    50% {
+        transform: translateX(0) rotate(180deg);
+        /*half way slide in, halway rotation*/
+    }
 
-       100% {
-        transform: translateX(0) rotate(360deg); /*full slide in, full rotation*/
-       }
+    100% {
+        transform: translateX(0) rotate(360deg);
+        /*full slide in, full rotation*/
+    }
 }
