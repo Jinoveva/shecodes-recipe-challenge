@@ -63,8 +63,7 @@ function updateFeedback(rating) {
 
 
 /* FOR COLLAPSILE FUNCTION
-<script>
-    // Get all the collapsible elements (the headings)
+// Get all the collapsible elements (the headings)
     var coll = document.getElementsByClassName("collapsible");
 
     // Loop through each collapsible element
@@ -81,7 +80,10 @@ function updateFeedback(rating) {
                 content.style.display = "block";
             }
         });
+
+        // Ensure the content is hidden by default (optional if you want it collapsed initially)
+        var content = coll[i].nextElementSibling;
+        content.style.display = "none";
     }
-</script>
 
 */
