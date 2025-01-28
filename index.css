@@ -28,13 +28,45 @@ h3 {
 img {
     width: 100%;
     height: auto;
-    max-height: 550px;
+    max-height: 500px;
     margin-bottom: 20px;
     position: relative;
     animation: slideRotate 2s ease-out forwards;
     /* slides image for 2s then return back to starting position*/
 }
 
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style for steam */
+.steam {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: steamEffect 2s infinite;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Smaller steam particles animation */
+.steam::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: steamRise 2s infinite;
+    transform: translateX(-50%);
+}
 
 .details,
 .icons,
@@ -102,11 +134,7 @@ img {
     flex: 1;
     padding: 0;
     margin: 0;
-}
-
-.img-fluid {
-    max-width: 100%;
-    height: auto;
+    position: relative;
 }
 
 #method {
@@ -149,8 +177,6 @@ img {
     border-radius: 5px;
 }
 
-/*come back to make it interactive with JS*/
-
 .collapsible.active:after {
     content: ' ▲';
 }
@@ -183,7 +209,6 @@ img {
     cursor: pointer;
     transition: color 0.3s ease, transform 0.2s ease;
 }
-/* Come back to fix the hovering of stars: Hover effect for the current star and previous ones */
 
 .star:hover {
     color: #ffcc00;
@@ -228,5 +253,41 @@ footer {
     100% {
         transform: translateX(0) rotate(360deg);
         /*full slide in, full rotation*/
+    }
+}
+
+/* Steam rising animation */
+@keyframes steamEffect {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-50px) scale(1.2);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(-100px) scale(1.4);
+        opacity: 0;
+    }
+}
+
+/* Smaller steam particles rising animation */
+@keyframes steamRise {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-30px) scale(1.1);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(-60px) scale(1.3);
+        opacity: 0;
     }
 }
