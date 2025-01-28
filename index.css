@@ -3,6 +3,7 @@ body {
     font-family: "Amatic SC", serif;
     text-align: center;
     animation: slideIn 2s ease-out;
+    padding-bottom: 50px;
 }
 
 h1 {
@@ -10,7 +11,7 @@ h1 {
     font-weight: 700;
     font-size: 100px;
     color: #D97742;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 h2 {
@@ -223,8 +224,18 @@ img {
 }
 
 footer {
-    font-family: "Montserrat", serif;
-    border: 2px solid black;
+    font-family: "Monteserrat", serif;
+    position: fixed;
+    bottom: 0; /* This sets the footer's position to the bottom of the viewport. The 
+    0 value means the footer will be flush with the bottom edge of the screen. */
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid black;
+    z-index: 1000; /* Ensures it stays on top of other content */
 }
 
 @keyframes slideIn {
