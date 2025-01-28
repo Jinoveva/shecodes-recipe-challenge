@@ -183,7 +183,6 @@ img {
     cursor: pointer;
     transition: color 0.3s ease, transform 0.2s ease;
 }
-
 /* Come back to fix the hovering of stars: Hover effect for the current star and previous ones */
 
 .star:hover {
