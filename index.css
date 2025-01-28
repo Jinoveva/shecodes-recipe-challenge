@@ -121,7 +121,6 @@ img {
     margin-bottom: 20px;
 }
 
-/*
 .collapsible {
     cursor: pointer;
     background-color: #f1f1f1;
@@ -135,11 +134,13 @@ img {
     border-radius: 5px;
     margin: 10px 0;
 }
+
 .collapsible:after {
     content: ' ▼';
 }
-...for the content that is initially hidden
-.content { 
+
+/*for the content that is initially hidden*/
+.content {
     font-family: "Monteserrat", serif;
     display: none;
     padding: 0 10px;
@@ -147,7 +148,9 @@ img {
     background-color: #f9f9f9;
     border-radius: 5px;
 }
-...come back to make it interactive with JS*/
+
+/*come back to make it interactive with JS*/
+
 .collapsible.active:after {
     content: ' ▲';
 }
