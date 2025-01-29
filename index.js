@@ -107,3 +107,34 @@
     }
 
 */
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById(submitBtn).onclick = (event) =>{
+        event.preventDefault();
+
+        let comment = document.getElementById("comment").value.trim();
+        document.getElementById("submitContainer").innerHTML = comment
+        ? `<p>Thank you for the comment</p>`
+        : alert("Please write a comment before submitting");
+
+    };
+});
+
+
+/*THE ABOVE IS AN EASIER VERSION
+document.addEventListener("DOMContentLoaded", function () { //ensures that the script runs only after the HTML document has been fully loaded.
+    document.getElementById("submitBtn").addEventListener("click", function (event) {
+        event.preventDefault();
+
+        let comment = document.getElementById("comment").value.trim();
+
+        if(comment) {
+            document.getElementById("submitContainer").innerHTML = `<p>Thank you for commenting!</p>`;
+        }
+            else {
+                alert("Please leave a comment before submitting");
+        
+        }
+    });
+});
+*/

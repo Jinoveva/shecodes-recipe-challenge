@@ -223,12 +223,21 @@ img {
     color: #666
 }
 
+#commentForm {
+    padding: 50px;  
+    margin: 30px; 
+}
+
 #comment{
-    width: 40%;
-    padding: 40px;
-    margin: 20px;
-    
-   
+    width: 100%;
+    padding: 50px;
+}
+
+#submitBtn {
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #f1f1f1;
 }
 
 footer {
