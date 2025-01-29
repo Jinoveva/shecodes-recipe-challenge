@@ -223,6 +223,14 @@ img {
     color: #666
 }
 
+#comment{
+    width: 40%;
+    padding: 40px;
+    margin: 20px;
+    
+   
+}
+
 footer {
     font-family: "Monteserrat", serif;
     position: fixed;
@@ -234,7 +242,7 @@ footer {
     color: #333;
     text-align: center;
     padding: 10px 0;
-    border-top: 2px solid black;
+    border-top: 1px solid black;
     z-index: 1000; /* Ensures it stays on top of other content */
 }
 
