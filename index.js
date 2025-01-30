@@ -1,64 +1,34 @@
-/* FOR HOVERING FUNCTION
-// --- Rating Section ---
-    const stars = document.querySelectorAll('.star');
-    const feedback = document.querySelector('.feedback');
+const stars = document.querySelectorAll('.star');
+const feedback = document.querySelector('.feedback');
 
-    stars.forEach((star, index) => {
-        // Add hover effect (temporary visual feedback)
-        star.addEventListener('mouseover', () => {
-            resetStars(); // Reset all stars
-            highlightStars(index); // Highlight stars up to the hovered one
-        });
+stars.forEach((star, index) => {
+    star.addEventListener('mouseover', () => highlightStars(index));
+    star.addEventListener('mouseout', applySelection);
+    star.addEventListener('click', () => selectStars(index));
+});
 
-        // Remove hover effect when mouse leaves
-        star.addEventListener('mouseout', () => {
-            resetStars(); // Reset all stars
-            applySelection(); // Apply permanent selection
-        });
-
-        // Add click event for permanent selection
-        star.addEventListener('click', () => {
-            clearSelection(); // Clear previous selection
-            for (let i = 0; i <= index; i++) {
-                stars[i].classList.add('selected'); // Select stars up to the clicked one
-            }
-            updateFeedback(index + 1); // Update feedback text
-        });
+function highlightStars(index) {
+    stars.forEach((star, i) => {
+        star.style.color = i <= index ? '#ffcc00' : '#ccc';
     });
+}
 
-    // Reset all stars (remove hover and selection)
-    function resetStars() {
-        stars.forEach(star => star.classList.remove('hover', 'selected'));
-    }
+function applySelection() {
+    stars.forEach(star => {
+        star.style.color = star.classList.contains('selected') ? '#ffcc00' : '#ccc';
+    });
+}
 
-    // Apply persistent selection based on selected stars
-    function applySelection() {
-        stars.forEach(star => {
-            if (star.classList.contains('selected')) {
-                star.style.color = '#ffcc00'; // Selected stars in yellow
-            } else {
-                star.style.color = '#ccc'; // Unselected stars in gray
-            }
-        });
-    }
+function selectStars(index) {
+    stars.forEach((star, i) => star.classList.toggle('selected', i <= index));
+    updateFeedback(index + 1);
+}
 
-    // Highlight stars up to a specific index (hover effect)
-    function highlightStars(index) {
-        for (let i = 0; i <= index; i++) {
-            stars[i].style.color = '#ffcc00'; // Highlight in yellow
-        }
-    }
+function updateFeedback(rating) {
+    feedback.textContent = `You rated this recipe ${rating} star${rating > 1 ? 's' : ''}!`;
+}
 
-    // Clear all selections
-    function clearSelection() {
-        stars.forEach(star => star.classList.remove('selected'));
-    }
-
-    // Update feedback text
-    function updateFeedback(rating) {
-        feedback.textContent = `You rated this recipe ${rating} star${rating > 1 ? 's' : ''}!`;
-    }
-
+    /* FOR COLLAPSILE FUNCTION
     // --- Collapsible Section ---
     const collapsibles = document.getElementsByClassName("collapsible");
 
@@ -74,15 +44,14 @@
             }
         });
 
+
         // Ensure the content is hidden by default (optional)
         const content = collapsibles[i].nextElementSibling;
         content.style.display = "none";
     }
 
-*/
 
 
-/* FOR COLLAPSILE FUNCTION
 // Get all the collapsible elements (the headings)
     var coll = document.getElementsByClassName("collapsible");
 
