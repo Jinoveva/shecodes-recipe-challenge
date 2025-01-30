@@ -108,15 +108,20 @@
 
 */
 
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById(submitBtn).onclick = (event) =>{
-        event.preventDefault();
+document.addEventListener("DOMContentLoaded", () => { //Makes sure the entire script runs only after entire webpage(HTML) has loaded
+    // => short way for writing function
+    document.getElementById("submitBtn").onclick = (event)=> { //selects submitBtn and assigns a fxn to run when it's clicked
+        // .onclick substitutes the addEevent.Listener("click", function () {...})
+        event.preventDefault(); //prevents webpage from reloading after submitting
 
         let comment = document.getElementById("comment").value.trim();
-        document.getElementById("submitContainer").innerHTML = comment
-        ? `<p>Thank you for the comment</p>`
-        : alert("Please write a comment before submitting");
-
+       if (comment) {
+            // Only replace the button if a comment is entered
+            document.getElementById("submitContainer").innerHTML = `<p>Thank you for leaving a comment</p>`;
+        } else {
+            // If no comment, alert the user but keep the button
+            alert("Please enter a comment before submitting.");
+        }
     };
 });
 
